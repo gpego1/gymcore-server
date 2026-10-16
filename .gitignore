@@ -1,0 +1,11 @@
+/target/
+/.idea/
+*.iml
+.env
+*.log
+.mvn
+scripts/
+GymCore_Documentacao_Tecnica.pdf
+GymCore_Escopo_MVP_Backend.md
+GymCore_MVP.pdf
+prompt.txt

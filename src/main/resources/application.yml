@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: gymcore-backend
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        jdbc:
+          time_zone: UTC
+  flyway:
+    clean-disabled: true
+  jackson:
+    deserialization:
+      fail-on-unknown-properties: true
+server:
+  address: ${SERVER_ADDRESS}
+  port: ${SERVER_PORT}
+  error:
+    include-message: never
+    include-stacktrace: never
+gymcore:
+  timezone: ${GYMCORE_TIMEZONE}
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html

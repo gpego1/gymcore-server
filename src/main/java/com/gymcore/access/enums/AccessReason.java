@@ -1,0 +1,3 @@
+package com.gymcore.access.enums;
+
+public enum AccessReason { ELIGIBLE, TENANT_INACTIVE, STUDENT_INACTIVE, NO_CURRENT_CONTRACT, OVERDUE_INVOICE, BILLING_SYNC_PENDING }

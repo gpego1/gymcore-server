@@ -1,6 +1,6 @@
 # GymCore Backend
 
-API REST inicial para desenvolvimento local, conforme o escopo reduzido de `prompt.txt`. Implementa cadastros, contratos, aceite presencial, mensalidades, recebimentos manuais e decisões de acesso assistido.
+API REST para desenvolvimento de Software corporativo para academias. Implementa cadastros, contratos, aceite presencial, mensalidades, recebimentos manuais e decisões de acesso assistido.
 
 **Sem autenticação ou autorização de usuários.** O identificador da academia na URL delimita consultas e vínculos; qualquer cliente com acesso à API pode selecionar outra academia. Não está pronta para exposição pública. Por padrão, o servidor escuta somente em `127.0.0.1`.
 
@@ -132,10 +132,4 @@ Testes cobrem datas, isolamento, constraints reais, aceite, atomicidade, snapsho
 
 Verificação executada em **16/10/2026**, com JDK 21.0.10 e PostgreSQL 18.6: `verify` concluiu com **24 testes aprovados** (4 unitários e 20 de integração), zero falhas, erros ou testes ignorados. O JAR empacotado foi iniciado contra outro banco temporário; OpenAPI (19 caminhos e 31 operações), Swagger e `scripts/demo.ps1` foram exercitados por HTTP. O fluxo terminou com `ALLOWED` / `ELIGIBLE`. Aplicação e instâncias temporárias foram paradas após as verificações.
 
-## Limites do ambiente e do escopo
 
-O checkout inicial continha somente documentos e metadados de IDE, sem Git, entidades, migrations ou configuração de banco. O PostgreSQL existente exigia credenciais não fornecidas: não foi acessado nem alterado. A validação usa instância temporária independente; compatibilidade com qualquer schema externo continua dependendo de acesso e inspeção desse schema.
-
-Docker estava instalado, mas o daemon não estava disponível; os testes usam os binários locais do PostgreSQL. Nenhuma integração externa, autenticação, frontend, job agendado, infraestrutura de deploy ou funcionalidade dos módulos adiados foi adicionada.
-
-A consulta complementar ao repositório remoto do cliente expirou. A implementação se baseia nos documentos locais e no escopo reduzido; não foi validada integração com o frontend, que está fora desta etapa.
